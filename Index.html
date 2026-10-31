@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для самой лучшей мамы на свете! ❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+            color: #4c1d95;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            animation: fadeIn 1.2s ease-out;
+        }
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #db2777;
+        }
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #be185d;
+        }
+        .compliments-box {
+            background: #fdf2f8;
+            border-left: 4px solid #f472b6;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .compliments-box ul {
+            list-style-type: none;
+        }
+        .compliments-box li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .btn {
+            background: linear-gradient(90deg, #ec4899 0%, #db2777 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="heart">❤️</div>
+    <h1>Мамочка, ты самая крутая!</h1>
+    
+    <p>Сегодня особенный день, и я хочу напомнить тебе о том, какая ты невероятная. Ты вдохновляешь меня каждый день, и твоя поддержка — это самое ценное, что у меня есть.</p>
+    
+    <div class="compliments-box">
+        <ul>
+            <li>✨ <span class="highlight">Ты безумно крутая</span> — справляешься с любыми задачами с легкостью.</li>
+            <li>🌸 <span class="highlight">Ты самая заботливая</span> — твое тепло чувствуется даже на расстоянии.</li>
+            <li>💫 <span class="highlight">Ты лучшая подруга</span> — с тобой всегда можно поделиться всем на свете.</li>
+        </ul>
+    </div>
+    
+    <p>Спасибо за твою любовь, за твою бесконечную доброту и за то, что ты просто есть. Будь самой счастливой!</p>
+    
+    <button class="btn" onclick="celebrate()">Я тебя люблю!</button>
+</div>
+
+<script src="https://jsdelivr.net"></script>
+<script>
+    function celebrate() {
+        // Запуск красивого салюта из конфетти при нажатии на кнопку
+        confetti({
+            particleCount: 150,
+            spread: 80,
+            origin: { y: 0.6 }
+        });
+    }
+    // Автоматический запуск конфетти при открытии страницы
+    window.onload = function() {
+        setTimeout(celebrate, 500);
+    }
+</script>
+
+</body>
+</html>
